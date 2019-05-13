@@ -3,7 +3,11 @@
 // GLAD
 // This should be included before GLFW.
 // The include file for GLAD contains the correct OpenGL header includes.
-#include <glad/glad.h>
+// #include <glad/glad.h>
+
+// GL_LITE OpenGL Loader
+#define GL_LITE_IMPLEMENTATION
+#include "gl_lite.h"
 
 // GLFW
 #include <GLFW/glfw3.h>
@@ -100,7 +104,8 @@ int main(void)
     glfwMakeContextCurrent(window);
 
     // Load OpenGL using an external loader.
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    // if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    if (!gl_lite_init())
     {
         std::cout << "Failed to initialize OpenGL context" << std::endl;
         return -1;
