@@ -48,7 +48,7 @@ linmath comes from https://github.com/datenwolf/linmath.h
 ```bash
 g++ -Wall -c glad.c
 g++ -Wall -c main.c
-g++ -o main main.o glad.o -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl -lm
+g++ -o main.out main.o glad.o -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl -lm
 ```
 
 See e.g. https://www.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
@@ -56,5 +56,5 @@ See e.g. https://www.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
 ## Running
 
 ```bash
-./main
+./main.out
 ```
